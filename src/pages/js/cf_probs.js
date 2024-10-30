@@ -68,6 +68,8 @@ export async function getText(){
         }
     }
     sections.push(curr);
-    console.log(sections);
-    return sections;
+    return {
+        "sections":sections,
+        "lines": text
+    };
 };

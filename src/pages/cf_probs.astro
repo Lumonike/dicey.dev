@@ -2,7 +2,6 @@
 // npm run dev -- --host
 import { getText } from "/root/lumonike/astro/src/pages/js/cf_probs.js"
 let text = await getText();
-// console.log(text);
 ---
 
 <html lang="en">
@@ -14,6 +13,6 @@ let text = await getText();
 		<title>Silly Goose-dom</title>
 	</head>
 	<body style="overflow: hidden;">
-        <textarea style="width: 100vw; height: 100vh; top: 0; left: 0; position: absolute;">{text}</textarea>
+        <textarea style="width: 100vw; height: 100vh; top: 0; left: 0; position: absolute;">{text.lines}</textarea>
 	</body>
 </html>

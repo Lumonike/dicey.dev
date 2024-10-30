@@ -1,4 +1,5 @@
 ---
+const basePath = import.meta.env.BASE_PATH || '';
 ---
 
 <html lang="en">
@@ -10,9 +11,8 @@
 		<title>Silly Goose-dom</title>
 	</head>
 	<body>
-		<a href="cf_probs">CF PROBLEMS</a>
+		<a href={basePath+"/cf_probs/"}>[codeforces problems]</a>
 		<br>
-		<a href="cookie_clicker">cookie clicker</a>
 		<h1>"CSS overrated" - Sun Tzu</h1>
 	</body>
 </html>
