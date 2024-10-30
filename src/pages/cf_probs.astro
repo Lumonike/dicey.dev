@@ -1,23 +1,8 @@
 ---
-async function fetchPastebinContent(pasteKey) {
-    const url = `https://pastebin.com/raw/${pasteKey}`; // Using the raw URL to get the paste content directly
-
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Error: ${response.status}`);
-        }
-        const data = await response.text(); // Get the text content of the paste
-        console.log(data); // Log the content to the console
-        return data;
-    } catch (error) {
-        console.error('Failed to fetch the paste:', error);
-    }
-}
-
-// Replace 'QgxHyhiH' with your actual paste key
-let text = fetchPastebinContent('QgxHyhiH');
-
+// npm run dev -- --host
+import { getText } from "/root/lumonike/astro/src/pages/js/cf_probs.js"
+let text = await getText();
+// console.log(text);
 ---
 
 <html lang="en">
