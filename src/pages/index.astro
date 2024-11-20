@@ -1,5 +1,12 @@
 ---
-const basePath = import.meta.env.BASE_PATH || '';
+const basePath = import.meta.env.BASE_PATH || "fuckall";
+
+function getPath(path){
+	if (basePath != "fuckall"){
+		return basePath  + path;
+	}
+	return path;
+}
 ---
 
 <html lang="en">
@@ -11,7 +18,7 @@ const basePath = import.meta.env.BASE_PATH || '';
 		<title>Silly Goose-dom</title>
 	</head>
 	<body>
-		<a href={basePath+"/cf_probs/"}>[codeforces problems]</a>
+		<a href={getPath("/cf_probs")}>[codeforces problems]</a>
 		<br>
 		<h1>"CSS overrated" - Sun Tzu</h1>
 	</body>
